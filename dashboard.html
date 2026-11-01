@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard | LitMe</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+      <a class="side-brand" href="index.html"><span class="brand-mark small">L<span>+</span></span><span>LITME<small>UC · OCCUPATIONAL SAFETY</small></span></a>
+      <p class="side-section">MONITORING</p>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class="active"><span>◈</span>Overview</a>
+        <a href="maps.html" class=""><span>⌖</span>Digital map</a>
+        <a href="alerts.html" class=""><span>⚠</span>Alerts & history</a>
+        <a href="settings.html" class=""><span>⌁</span>Hardware settings</a>
+        <a href="profile.html" class=""><span>◎</span>Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="user-mini"><span class="mini-avatar">U</span><div><b>Guest user</b><small>Static preview</small></div></div>
+        <a class="side-nav-link" href="index.html">← Back to welcome</a>
+      </div>
+    </aside>
+      <main class="app-main">
+        <header class="topbar">
+          <div><p class="eyebrow">SCIENCE BUILDING · UC-OSH</p><h1>Monitoring overview</h1><p class="muted">Static demonstration of gate conditions and sensor health.</p></div>
+          <div class="topbar-actions"><span class="pill"><i class="tiny-dot amber"></i> Demo data only</span><a class="avatar-button" href="profile.html" aria-label="Open profile">U</a></div>
+        </header>
+        <section class="holo-banner neutral"><span class="holo-symbol">◈</span><div><b>STATUS UNCONFIRMED</b><p>This page uses sample values. No live sensor reports are connected. Unknown status is not a clear status.</p></div></section>
+        <section class="stat-grid">
+          <article class="stat-card"><span class="stat-label">Monitored gates</span><strong>2</strong><span class="stat-foot">Science Building</span></article>
+          <article class="stat-card stat-green"><span class="stat-label">Passable</span><strong>0</strong><span class="stat-foot">Confirmed clear</span></article>
+          <article class="stat-card stat-red"><span class="stat-label">Obstructed</span><strong>0</strong><span class="stat-foot">Confirmed obstruction</span></article>
+          <article class="stat-card stat-violet"><span class="stat-label">Unconfirmed</span><strong>2</strong><span class="stat-foot">Offline or no fresh report</span></article>
+        </section>
+        <section class="panel">
+          <div class="section-heading"><div><h2>Gate status</h2><p class="muted">Sample LED and sensor confirmation states.</p></div><a href="maps.html" class="text-link">Open digital map ↗</a></div>
+          <div class="gate-list">
+            <article class="gate-card"><div class="led unknown"><span></span></div><div class="gate-main"><div class="gate-title-row"><h3>Gate 6</h3><span class="status-chip unknown">UNKNOWN</span></div><p>No current sensor report is available.</p><div class="gate-meta"><span>Science Building</span><span>Temp: --</span><span>Sensor offline / unconfirmed</span></div></div></article>
+            <article class="gate-card"><div class="led unknown"><span></span></div><div class="gate-main"><div class="gate-title-row"><h3>Gate 7</h3><span class="status-chip unknown">UNKNOWN</span></div><p>No current sensor report is available.</p><div class="gate-meta"><span>Science Building</span><span>Temp: --</span><span>Sensor offline / unconfirmed</span></div></div></article>
+          </div>
+        </section>
+        <section class="content-grid">
+          <article class="panel"><div class="section-heading"><div><h2>Recent alerts</h2><p class="muted">Static sample event list.</p></div><a href="alerts.html" class="text-link">View all ↗</a></div><div class="event-list"><p class="muted">No live alerts are available in this HTML/CSS-only version.</p></div></article>
+          <article class="panel sensor-panel"><div class="section-heading"><div><h2>Sensor environment</h2><p class="muted">Latest temperature reports</p></div><span class="sensor-icon">⌁</span></div><div class="temperature-list"><div class="temp-row"><span><i class="tiny-dot gray"></i>Gate 6</span><b>--.- °C</b></div><div class="temp-row"><span><i class="tiny-dot gray"></i>Gate 7</span><b>--.- °C</b></div></div><div class="sensor-note"><span class="tiny-dot cyan"></span><p>Temperature values are unavailable because no connected sensor feed is running.</p></div><a href="settings.html" class="text-link">Hardware integration guide ↗</a></article>
+        </section>
+        <section class="panel"><div class="section-heading"><div><h2>Demo status reference</h2><p class="muted">These are visual examples only. They do not change gate states.</p></div><span class="pill">STATIC DEMO</span></div><div class="test-controls"><span class="status-chip passable">PASSABLE</span><span class="status-chip obstructed">OBSTRUCTED</span><span class="status-chip unknown">UNKNOWN</span></div><p class="tiny muted">The physical buzzer should be triggered locally by the microcontroller's obstruction-confirmation logic, even if the website is disconnected.</p></section>
+      </main>
+    </div>
+  </body>
+</html>

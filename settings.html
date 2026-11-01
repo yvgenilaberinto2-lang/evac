@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hardware & settings | LitMe</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+      <a class="side-brand" href="index.html"><span class="brand-mark small">L<span>+</span></span><span>LITME<small>UC · OCCUPATIONAL SAFETY</small></span></a>
+      <p class="side-section">MONITORING</p>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class=""><span>◈</span>Overview</a>
+        <a href="maps.html" class=""><span>⌖</span>Digital map</a>
+        <a href="alerts.html" class=""><span>⚠</span>Alerts & history</a>
+        <a href="settings.html" class="active"><span>⌁</span>Hardware settings</a>
+        <a href="profile.html" class=""><span>◎</span>Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="user-mini"><span class="mini-avatar">U</span><div><b>Guest user</b><small>Static preview</small></div></div>
+        <a class="side-nav-link" href="index.html">← Back to welcome</a>
+      </div>
+    </aside>
+      <main class="app-main">
+        <header class="topbar"><div><p class="eyebrow">DEVICE INTEGRATION</p><h1>Hardware settings</h1><p class="muted">Reference information for an ESP32/Arduino gateway.</p></div><div class="topbar-actions"><a class="avatar-button" href="profile.html" aria-label="Open profile">U</a></div></header>
+        <section class="holo-banner neutral"><span class="holo-symbol">⌁</span><div><b>LOCAL BUZZER IS PRIMARY</b><p>Obstruction confirmation should activate the buzzer directly on the microcontroller. Do not make the alarm depend on browser audio, a server, or internet access.</p></div></section>
+        <section class="panel"><h2>Device event endpoint reference</h2><p class="muted">The following endpoint is documentation only. This HTML/CSS-only site does not send or receive requests.</p><div class="endpoint-box"><code>http://localhost:3000/api/hardware/events</code></div><p class="muted">Example gate status payload:</p><pre><code>{"type":"gate","id":"gate6","status":"obstructed","note":"Obstruction confirmed","temperature":27.4}</code></pre><p class="muted">Example temperature-only payload:</p><pre><code>{"type":"sensor","id":"gate6","temperature":28.1,"humidity":66}</code></pre><p class="muted">Required header in a backend-enabled implementation: <code>x-litme-token: YOUR_DEVICE_TOKEN</code>. Keep the token private.</p></section>
+        <section class="panel"><h2>Sensor confirmation behavior</h2><ul class="definition-list"><li><b>Green / passable:</b> controller has confirmed the path clear using its approved logic.</li><li><b>Red / obstructed:</b> controller confirmation logic detects a blockage and activates the local buzzer.</li><li><b>Unknown / offline:</b> no fresh trustworthy report is available, or the sensor/controller is disconnected.</li><li><b>Temperature:</b> only show measured sensor readings. Missing readings remain unavailable.</li></ul><p class="muted">Use freshness timeouts on the controller or gateway. Never turn a stale reading into a green status.</p></section>
+        <section class="panel"><h2>Current gate inventory</h2><div class="gate-list"><article class="gate-card"><div class="led unknown"><span></span></div><div class="gate-main"><div class="gate-title-row"><h3>Gate 6</h3><span class="status-chip unknown">UNKNOWN</span></div><p>Offline / unconfirmed · Temperature unavailable</p></div></article><article class="gate-card"><div class="led unknown"><span></span></div><div class="gate-main"><div class="gate-title-row"><h3>Gate 7</h3><span class="status-chip unknown">UNKNOWN</span></div><p>Offline / unconfirmed · Temperature unavailable</p></div></article></div><a class="text-link" href="maps.html">View gate markers on the map ↗</a></section>
+      </main>
+    </div>
+  </body>
+</html>

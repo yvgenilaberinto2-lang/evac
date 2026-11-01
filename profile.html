@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Profile | LitMe</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+      <a class="side-brand" href="index.html"><span class="brand-mark small">L<span>+</span></span><span>LITME<small>UC · OCCUPATIONAL SAFETY</small></span></a>
+      <p class="side-section">MONITORING</p>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class=""><span>◈</span>Overview</a>
+        <a href="maps.html" class=""><span>⌖</span>Digital map</a>
+        <a href="alerts.html" class=""><span>⚠</span>Alerts & history</a>
+        <a href="settings.html" class=""><span>⌁</span>Hardware settings</a>
+        <a href="profile.html" class="active"><span>◎</span>Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="user-mini"><span class="mini-avatar">U</span><div><b>Guest user</b><small>Static preview</small></div></div>
+        <a class="side-nav-link" href="index.html">← Back to welcome</a>
+      </div>
+    </aside>
+      <main class="app-main">
+        <header class="topbar"><div><p class="eyebrow">ACCOUNT SETTINGS</p><h1>Your profile</h1><p class="muted">Static profile layout. Changes are not saved.</p></div><div class="topbar-actions"><span class="avatar-button">U</span></div></header>
+        <section class="panel profile-panel"><div class="profile-hero"><div class="profile-photo-wrap"><div class="profile-photo-fallback">U</div></div><div><h2>Your profile</h2><p class="muted">@guest</p><p class="tiny muted">Profile picture upload requires JavaScript and a backend, so it is unavailable here.</p></div></div>
+          <div class="profile-form"><div class="form-grid"><div><label for="fullName">Full name</label><input id="fullName" value="Guest User" readonly></div><div><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com"></div><div><label for="phone">Phone (optional)</label><input id="phone" placeholder="Phone number"></div><div><label for="department">Department / role</label><input id="department" placeholder="Department or role"></div><div class="wide"><label for="bio">About</label><textarea id="bio" rows="4" placeholder="A short profile description"></textarea></div></div><p class="tiny muted">You can type into these fields while viewing the page, but HTML and CSS alone cannot save your changes.</p></div></section>
+      </main>
+    </div>
+  </body>
+</html>

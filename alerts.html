@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alerts | LitMe</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+      <a class="side-brand" href="index.html"><span class="brand-mark small">L<span>+</span></span><span>LITME<small>UC · OCCUPATIONAL SAFETY</small></span></a>
+      <p class="side-section">MONITORING</p>
+      <nav class="side-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class=""><span>◈</span>Overview</a>
+        <a href="maps.html" class=""><span>⌖</span>Digital map</a>
+        <a href="alerts.html" class="active"><span>⚠</span>Alerts & history</a>
+        <a href="settings.html" class=""><span>⌁</span>Hardware settings</a>
+        <a href="profile.html" class=""><span>◎</span>Profile</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="user-mini"><span class="mini-avatar">U</span><div><b>Guest user</b><small>Static preview</small></div></div>
+        <a class="side-nav-link" href="index.html">← Back to welcome</a>
+      </div>
+    </aside>
+      <main class="app-main">
+        <header class="topbar"><div><p class="eyebrow">EVENT MONITORING</p><h1>Alerts & history</h1><p class="muted">Example layout for recorded gate status changes and sensor reports.</p></div><div class="topbar-actions"><span class="pill">STATIC SAMPLE</span><a class="avatar-button" href="profile.html" aria-label="Open profile">U</a></div></header>
+        <section class="holo-banner danger"><span class="holo-symbol">⚠</span><div><b>OBSTRUCTION ALARM DESIGN</b><p>The physical buzzer should sound from the Arduino/ESP32 locally when obstruction confirmation triggers. This static website does not receive or record events.</p></div></section>
+        <section class="panel"><div class="section-heading"><div><h2>Event history</h2><p class="muted">Sample event entries for presentation only. No database is connected.</p></div><span class="pill">3 sample events</span></div>
+          <div class="event-list">
+            <article class="event-row"><span class="event-mark critical"></span><div class="event-content"><div class="event-heading"><b>Gate 6 obstruction example</b><small>Sample event</small></div><p>Illustrative obstruction event. The local controller should activate the buzzer.</p><small>Gate 6 · Science Building</small></div></article>
+            <article class="event-row"><span class="event-mark warning"></span><div class="event-content"><div class="event-heading"><b>Gate 7 sensor offline example</b><small>Sample event</small></div><p>Illustrative offline state. Do not treat an unavailable reading as passable.</p><small>Gate 7 · Science Building</small></div></article>
+            <article class="event-row"><span class="event-mark"></span><div class="event-content"><div class="event-heading"><b>Temperature report example</b><small>Sample event</small></div><p>Illustrative sensor report. No actual temperature measurement is displayed.</p><small>Gate 6 · Sensor feed</small></div></article>
+          </div></section><p class="tiny muted">This prototype is not a certified life-safety system. Follow UC-OSH-approved emergency procedures.</p>
+      </main>
+    </div>
+  </body>
+</html>
